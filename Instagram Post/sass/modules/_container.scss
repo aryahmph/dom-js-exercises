@@ -1,0 +1,234 @@
+@use 'mixin';
+
+.container {
+  display: flex;
+  position: relative;
+  width: 1400px;
+  height: 800px;
+  z-index: 1;
+
+  @media screen and (max-width: 1400px) {
+    width: 1000px;
+    height: 570px;
+  }
+
+  .close {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    z-index: 99;
+    cursor: pointer;
+  }
+}
+
+.content {
+  @include mixin.flex();
+  position: absolute;
+  width: 900px;
+  height: 800px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  @media screen and (max-width: 1400px) {
+    width: 650px;
+    height: 570px;
+  }
+
+  &-bg {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    img {
+      @media screen and (max-width: 1400px) {
+        height: 570px;
+      }
+    }
+  }
+
+  &-upper {
+    @include mixin.flex(space-between);
+    width: 900px;
+    height: 800px;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+
+    @media screen and (max-width: 1400px) {
+      width: 650px;
+      height: 570px;
+    }
+  
+    img {
+      cursor: pointer;
+      transition: .5s;
+      @media screen and (max-width: 1400px) {
+        width: 85px;
+      }
+    }
+    img:hover {
+      filter: drop-shadow(0 4px 15px rgba(0,0,0,.3));
+    }
+  }
+}
+
+.feed {
+  position: absolute;
+  width: 500px;
+  height: 800px;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  padding: 30px 35px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1400px) {
+    width: 360px;
+    height: 570px;
+    padding: 20px 25px;
+  }
+
+  &-heading {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+
+    @media screen and (max-width: 1400px) {
+      font-size: 18px;
+    }
+
+    img {
+      margin-right: 20px;
+      @media screen and (max-width: 1400px) {
+        width: 50px;
+      }
+    }
+  }
+
+  hr {
+    display: block;
+    border: 0;
+    border-top: 1px solid rgb(211, 211, 211);
+    width: 400px;
+    height: 1px;
+    margin: 25px 0 35px;
+
+    @media screen and (max-width: 1400px) {
+      width: 300px;
+      margin: 18 0 28px;
+    }
+  }
+
+  &-text {
+    width: 400px;
+    @media screen and (max-width: 1400px) {
+      width: 300px;
+    }
+
+    span {
+      font-weight: 500;
+      color: black;
+    }
+    h5 {
+      font-size: 14px;
+      margin-top: 20px;
+      color: #363636;
+      @media screen and (max-width: 1400px) {
+        font-size: 12px;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &-comment {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 270px;
+    overflow-y: auto;
+    margin-top: -28px;
+
+    @media screen and (max-width: 1400px) {
+      width: 300px;
+      height: 145px;
+    }
+
+    &-user{
+      margin-top: 20px;
+      @media screen and (max-width: 1400px) {
+        margin-top: 15px;
+      }
+      &-txt {
+        span {
+          font-weight: 500;
+          margin-right: 10px;
+        }
+      }
+
+      &-features {
+        display: flex;
+        font-size: 12px;
+        color: #939393;
+
+        p {
+          margin-right: 10px;
+          cursor: pointer;
+          font-weight: 700;
+          transition: .5s;
+          &:hover {
+            color: #ec4646;
+          }
+        }
+      }
+    }
+  }
+  .comment {
+    margin: 5px 0 15px;
+  }
+  &-input {
+    input[type=text] {
+      width: 315px;
+      height: 40px;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+
+      @media screen and (max-width: 1400px) {
+        width: 250px;
+        height: 25px;
+      }
+
+      &::placeholder {
+        font-size: 15px;
+        @media screen and (max-width: 1400px) {
+          font-size: 13px;
+        }
+      }
+    }
+
+    button {
+      border: none;
+      background: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 500;
+      color: #1687a7;
+      
+      @media screen and (max-width: 1400px) {
+        font-size: 13px;
+      }
+    }
+    
+  }
+}
+
+.red-love {
+  color: #ec4646;
+}

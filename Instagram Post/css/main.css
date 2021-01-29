@@ -1,0 +1,261 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  line-height: 27px;
+  font-size: 18px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #E5E5E5;
+  color: #252525;
+}
+@media screen and (max-width: 1400px) {
+  body {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.container {
+  display: flex;
+  position: relative;
+  width: 1400px;
+  height: 800px;
+  z-index: 1;
+}
+@media screen and (max-width: 1400px) {
+  .container {
+    width: 1000px;
+    height: 570px;
+  }
+}
+.container .close {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 900px;
+  height: 800px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+@media screen and (max-width: 1400px) {
+  .content {
+    width: 650px;
+    height: 570px;
+  }
+}
+.content-bg {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 1400px) {
+  .content-bg img {
+    height: 570px;
+  }
+}
+.content-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 900px;
+  height: 800px;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 1400px) {
+  .content-upper {
+    width: 650px;
+    height: 570px;
+  }
+}
+.content-upper img {
+  cursor: pointer;
+  transition: 0.5s;
+}
+@media screen and (max-width: 1400px) {
+  .content-upper img {
+    width: 85px;
+  }
+}
+.content-upper img:hover {
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3));
+}
+
+.feed {
+  position: absolute;
+  width: 500px;
+  height: 800px;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  padding: 30px 35px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1400px) {
+  .feed {
+    width: 360px;
+    height: 570px;
+    padding: 20px 25px;
+  }
+}
+.feed-heading {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1400px) {
+  .feed-heading {
+    font-size: 18px;
+  }
+}
+.feed-heading img {
+  margin-right: 20px;
+}
+@media screen and (max-width: 1400px) {
+  .feed-heading img {
+    width: 50px;
+  }
+}
+.feed hr {
+  display: block;
+  border: 0;
+  border-top: 1px solid lightgray;
+  width: 400px;
+  height: 1px;
+  margin: 25px 0 35px;
+}
+@media screen and (max-width: 1400px) {
+  .feed hr {
+    width: 300px;
+    margin: 18 0 28px;
+  }
+}
+.feed-text {
+  width: 400px;
+}
+@media screen and (max-width: 1400px) {
+  .feed-text {
+    width: 300px;
+  }
+}
+.feed-text span {
+  font-weight: 500;
+  color: black;
+}
+.feed-text h5 {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #363636;
+}
+@media screen and (max-width: 1400px) {
+  .feed-text h5 {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+}
+.feed-comment {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 270px;
+  overflow-y: auto;
+  margin-top: -28px;
+}
+@media screen and (max-width: 1400px) {
+  .feed-comment {
+    width: 300px;
+    height: 145px;
+  }
+}
+.feed-comment-user {
+  margin-top: 20px;
+}
+@media screen and (max-width: 1400px) {
+  .feed-comment-user {
+    margin-top: 15px;
+  }
+}
+.feed-comment-user-txt span {
+  font-weight: 500;
+  margin-right: 10px;
+}
+.feed-comment-user-features {
+  display: flex;
+  font-size: 12px;
+  color: #939393;
+}
+.feed-comment-user-features p {
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.feed-comment-user-features p:hover {
+  color: #ec4646;
+}
+.feed .comment {
+  margin: 5px 0 15px;
+}
+.feed-input input[type=text] {
+  width: 315px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+@media screen and (max-width: 1400px) {
+  .feed-input input[type=text] {
+    width: 250px;
+    height: 25px;
+  }
+}
+.feed-input input[type=text]::placeholder {
+  font-size: 15px;
+}
+@media screen and (max-width: 1400px) {
+  .feed-input input[type=text]::placeholder {
+    font-size: 13px;
+  }
+}
+.feed-input button {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1687a7;
+}
+@media screen and (max-width: 1400px) {
+  .feed-input button {
+    font-size: 13px;
+  }
+}
+
+.red-love {
+  color: #ec4646;
+}
+
+/*# sourceMappingURL=main.css.map */

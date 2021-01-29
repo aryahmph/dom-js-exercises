@@ -1,0 +1,21 @@
+@use 'mixin';
+
+body {
+    @include mixin.flex();
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    line-height: 27px;
+    font-size: 18px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #E5E5E5;
+    color: #252525;
+
+    @media screen and (max-width: 1400px) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+}

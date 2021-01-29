@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <title>Instagram Feed</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="content">
+      <div class="content-bg">
+        <img src="img/feed/photo.jpg" alt="feed" id="main-img">
+      </div>
+
+      <div class="content-upper">
+        <img src="img/icon/prev.png" alt="prev" id="prev">
+        <img src="img/icon/next.png" alt="next" id="next">
+      </div>
+
+    </div>
+
+    <div class="feed">
+      <div class="feed-heading">
+        <img src="img/profile.png" alt="profile">
+        <p>__stephaniee</p>
+      </div>
+      <hr>
+      <div class="feed-text">
+        <p><span>__stephaniee</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at metus vitae nisl
+          posuere scelerisque. Sed mattis massa ut bibendum laoreet. Quisque id iaculis justo, non malesuada nisi.
+          Vestibulum ut neque leo. Sed viverra, velit vel hendrerit gravida, leo sapien porttitor purus, nec consequat
+          metus mauris vel turpis.</p>
+
+        <h5>28 Januari 2021</h5>
+      </div>
+
+      <hr>
+
+      <ul class="feed-comment">
+
+        <li class="feed-comment-user">
+          <div class="feed-comment-user-txt">
+            <p><span>amir</span>Nice pic!</p>
+          </div>
+          <div class="feed-comment-user-features">
+            <p class="suka">Suka</p>
+            <p>Balas</p>
+          </div>
+        </li>
+
+        <li class="feed-comment-user">
+          <div class="feed-comment-user-txt">
+            <p><span>its.ereeeh</span>Taken byy?? :)</p>
+          </div>
+          <div class="feed-comment-user-features">
+            <p class="suka">Suka</p>
+            <p>Balas</p>
+          </div>
+        </li>
+
+      </ul>
+      <hr class="comment">
+      <div class="feed-input">
+        <form id="comment">
+          <input type="text" name="commentInput" id="commentInput" placeholder="Tulis komentar ..." autocomplete="off">
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="close">
+      <img src="img/icon/close.png" alt="close" id="close">
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
